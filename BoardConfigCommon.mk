@@ -23,7 +23,7 @@
 # inherit from qcom-common
 -include device/samsung/qcom-common/BoardConfigCommon.mk
 
-LOCAL_PATH := device/samsung/a5-common
+LOCAL_COMMON_PATH := device/samsung/a5-common
 BUILD_TOP  := $(shell pwd)
 
 TARGET_SPECIFIC_HEADER_PATH  := device/samsung/a5-common/include
@@ -74,7 +74,7 @@ BOARD_PERSISTIMAGE_PARTITION_SIZE   := 8388608
 BOARD_CACHEIMAGE_PARTITION_SIZE     := 209715200
 BOARD_USERDATAIMAGE_PARTITION_SIZE  := 12775813120
 BOARD_FLASH_BLOCK_SIZE              := 131072
-TARGET_FS_CONFIG_GEN                := $(LOCAL_PATH)/config.fs
+TARGET_FS_CONFIG_GEN                := $(LOCAL_COMMON_PATH)/config.fs
 
 # Root folders
 BOARD_ROOT_EXTRA_FOLDERS := \
@@ -126,7 +126,7 @@ AUDIO_FEATURE_ENABLED_FM            := true
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT  := true
 
 # Build our own PowerHAL
-TARGET_POWERHAL_SET_INTERACTIVE_EXT := $(LOCAL_PATH)/power/power_ext.c
+TARGET_POWERHAL_SET_INTERACTIVE_EXT := $(LOCAL_COMMON_PATH)/power/power_ext.c
 
 # Touchscreen
 TARGET_TAP_TO_WAKE_NODE := "/sys/class/sec/sec_touchscreen/wake_gesture"
@@ -250,3 +250,6 @@ endif
 # Dex
 WITH_DEXPREOPT := true
 WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
+
+# Manifest
+DEVICE_MANIFEST_FILE += $(LOCAL_COMMON_PATH)/hidl/manifest.xml

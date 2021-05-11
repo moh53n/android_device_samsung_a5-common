@@ -389,10 +389,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
 
-# HIDL
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/hidl/manifest.xml:$(TARGET_COPY_OUT_VENDOR)/manifest.xml
-
 # We have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
