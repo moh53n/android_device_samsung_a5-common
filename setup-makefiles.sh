@@ -138,7 +138,7 @@ EOF
 LOCAL_PATH := \$(call my-dir)
 
 ifeq (\$(BOARD_VENDOR),samsung)
-ifneq (\$(filter a5ultexx,\$(TARGET_DEVICE)),)
+#ifneq (\$(filter a5ultexx,\$(TARGET_DEVICE)),)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := com.qualcomm.location
@@ -191,6 +191,6 @@ LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 include \$(BUILD_PREBUILT)
 
-endif
+#endif
 endif
 EOF
