@@ -41,19 +41,6 @@ LOCAL_C_INCLUDES:= \
     $(TARGET_OUT_HEADERS)/gps.utils \
     $(TARGET_OUT_HEADERS)/libflp
 
-LOCAL_COPY_HEADERS_TO:= libloc_core/
-LOCAL_COPY_HEADERS:= \
-    LocApiBase.h \
-    LocAdapterBase.h \
-    ContextBase.h \
-    LocDualContext.h \
-    LBSProxyBase.h \
-    UlpProxyBase.h \
-    gps_extended_c.h \
-    gps_extended.h \
-    loc_core_log.h \
-    LocAdapterProxyBase.h
-
 LOCAL_PRELINK_MODULE := false
 
 include $(BUILD_SHARED_LIBRARY)
