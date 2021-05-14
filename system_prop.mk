@@ -13,7 +13,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.apm_sim_not_pwdn=1 \
     persist.radio.use_se_table_only=1 \
     persist.radio.jbims=1 \
-    telephony.lteOnGsmDevice=1 \
     ro.ril.telephony.mqanelements=6 \
     ro.telephony.ril.config=simactivation
 
